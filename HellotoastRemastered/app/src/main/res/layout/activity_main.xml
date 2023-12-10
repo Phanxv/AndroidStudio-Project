@@ -28,7 +28,7 @@
     <TextView
         android:id="@+id/text_count"
         android:layout_width="match_parent"
-        android:layout_height="635dp"
+        android:layout_height="610dp"
         android:layout_below="@id/button_toast"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
@@ -49,7 +49,8 @@
     <Button
         android:id="@+id/button_count"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@id/text_count"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
@@ -61,14 +62,15 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_below="@id/text_count"/>
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="243dp"
         android:layout_height="191dp"
+        android:layout_alignBottom="@+id/text_count"
         android:layout_marginTop="384dp"
+        android:layout_marginBottom="95dp"
         app:layout_constraintBottom_toTopOf="@+id/button_count"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.904"

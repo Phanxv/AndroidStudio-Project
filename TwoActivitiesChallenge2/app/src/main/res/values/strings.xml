@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Two Activities Challenge 2</string>
+    <string name="button_toast_label">SAY HELLO</string>
+    <string name="button_count_label">COUNT</string>
+</resources>
