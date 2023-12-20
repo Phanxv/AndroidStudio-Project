@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ImpIntent</string>
+    <string name="web_edt_text">https://www.tni.ac.th</string>
+    <string name="web_but_text">OPEN WEBSITE</string>
+    <string name="loc_edt_text">Seacon Square</string>
+    <string name="loc_but_text">OPEN LOCATION</string>
+    <string name="sha_edt_text">Hello eburinyan</string>
+    <string name="sha_but_text">SHARE TEXT</string>
+</resources>

@@ -1,32 +1,61 @@
 package com.example.twoactivity;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 public class SecondActivity extends AppCompatActivity {
-    public static final String REP_TAG = "rep_tag";
-    private EditText reply_box;
+    private static final String LOG_TAG = SecondActivity.class.getSimpleName();
+    public static final String EXTRA_REPLY =
+            "com.example.android.twoactivities.extra.REPLY";
+    private EditText mReply;
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.d(LOG_TAG, "onResume");
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        Log.d(LOG_TAG, "onRestart");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.d(LOG_TAG, "onPause");
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.d(LOG_TAG, "onStart");
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
+        mReply = findViewById(R.id.editText_second);
+
         Intent intent = getIntent();
-        String message = intent.getStringExtra(MainActivity.MSG_TAG);
-        TextView recv_text = findViewById(R.id.message_text);
-        recv_text.setText(message);
-        reply_box = findViewById(R.id.edt_sec_message);
+        String message = intent.getStringExtra(com.example.twoactivity.MainActivity.EXTRA_MESSAGE);
+        TextView textView = findViewById(R.id.text_message);
+        textView.setText(message);
+        Log.d(LOG_TAG, "--------");
+        Log.d(LOG_TAG, "onCreate");
     }
 
     public void returnReply(View view) {
-        String rep_msg = reply_box.getText().toString();
-        Intent rep_intent = new Intent();
-        rep_intent.putExtra(REP_TAG, rep_msg);
-        setResult(RESULT_OK, rep_intent);
+        String reply = mReply.getText().toString();
+        Intent replyIntent = new Intent();
+        replyIntent.putExtra(EXTRA_REPLY, reply);
+        setResult(RESULT_OK,replyIntent);
         finish();
     }
 }
