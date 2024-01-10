@@ -18,7 +18,7 @@
 
     <Button
         android:id="@+id/but_web"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
         android:text="@string/web_but_text"
@@ -34,7 +34,7 @@
 
     <Button
         android:id="@+id/but_loc"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
         android:text="@string/loc_but_text"
@@ -50,9 +50,16 @@
 
     <Button
         android:id="@+id/but_share"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
         android:text="@string/sha_but_text"
         android:onClick="share_text"/>
+    <Button
+        android:id="@+id/but_camera"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:text="@string/sha_but_text"
+        android:onClick="open_camera"/>
 </LinearLayout>
