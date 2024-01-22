@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Checkbox Challenge</string>
+    <string name="string_chocolate_syrup">Chocolate Syrup</string>
+    <string name="string_sprinkles">Sprinkles</string>
+    <string name="string_nuts">Crushed nuts</string>
+    <string name="string_cherries">Cherries</string>
+    <string name="string_oreo">Oreo cookie crumbles</string>
+</resources>
